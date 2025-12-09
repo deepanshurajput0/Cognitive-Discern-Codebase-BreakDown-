@@ -23,28 +23,53 @@
 
 
 
-class Intro  {
-     name:string
-     email:string
-     password:string
+// class Intro  {
+//      name:string
+//      email:string
+//      password:string
 
-    constructor(name:string,email:string,password:string){
-        this.name = name,
-        this.email = email,
-        this.password = password 
+//     constructor(name:string,email:string,password:string){
+//         this.name = name,
+//         this.email = email,
+//         this.password = password 
+//     }
+//      sayName(){
+//         console.log(`${this.name}`)
+//      }  
+//      sayEmail(){
+//         console.log(`${this.email}`)
+//      }
+
+// }
+
+// const newUser = new Intro("deepanshu","deepanshu@gmail.com","12334444")
+
+// newUser.sayName()
+// newUser.sayEmail()
+
+
+
+
+
+// visiblity modifiers in classes 
+
+// public -- allow access to class members from anywhere
+// private -- allow access to class members within the class 
+
+
+
+class Person {
+    private name:string
+    private constructor(name:string){
+       this.name = name 
     }
-     sayName(){
-        console.log(`${this.name}`)
-     }  
-     sayEmail(){
-        console.log(`${this.email}`)
-     }
 
+    private getName(){
+       return this.name
+    }
 }
 
-const newUser = new Intro("deepanshu","deepanshu@gmail.com","12334444")
-
-newUser.sayName()
-newUser.sayEmail()
+const person1 = new Person("deepanshu")
+console.log(person1.getName())
 
 
