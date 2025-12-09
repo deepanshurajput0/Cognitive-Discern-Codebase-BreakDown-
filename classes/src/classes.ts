@@ -59,17 +59,69 @@
 
 
 class Person {
-    private name:string
-    private constructor(name:string){
+    private readonly name:string
+    public constructor( name:string){
        this.name = name 
     }
 
-    private getName(){
+     public getName():string{
        return this.name
     }
+
+   //  changeName(){
+   //    this.name = "deepanshu"
+   //  }
+
+   // we cannot change its name because its readable only
+
+    // const newVal = new Person("dee")
+    
 }
 
 const person1 = new Person("deepanshu")
 console.log(person1.getName())
+
+
+
+/// Inheritance Implements 
+
+// interface Shape {
+//    getArea:()=>{}
+// }
+
+
+// class Rectangle implements Shape {
+//      constructor(protected readonly width:number,protected readonly height:number){
+//       this.height = height,
+//       this.width = width
+//      }
+
+//      public getArea():number{
+//        return this.width * this.height
+//      }
+    
+// }
+
+
+// const rect = new Rectangle(10,20)
+
+// console.log(rect.getArea())
+
+
+
+
+
+ class Fruit {
+   public fruits : string[] = []
+   constructor(myArr:string[]){
+       this.fruits = myArr
+   } 
+   getFruits(){
+      console.log(this.fruits)
+   }
+}
+
+const f1 = new Fruit(["apple","banana","mango"])
+f1.getFruits()
 
 

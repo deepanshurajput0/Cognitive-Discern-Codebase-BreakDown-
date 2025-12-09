@@ -47,4 +47,30 @@ class Person {
 }
 const person1 = new Person("deepanshu");
 console.log(person1.getName());
+/// Inheritance Implements 
+// interface Shape {
+//    getArea:()=>{}
+// }
+// class Rectangle implements Shape {
+//      constructor(protected readonly width:number,protected readonly height:number){
+//       this.height = height,
+//       this.width = width
+//      }
+//      public getArea():number{
+//        return this.width * this.height
+//      }
+// }
+// const rect = new Rectangle(10,20)
+// console.log(rect.getArea())
+class Fruit {
+    fruits = [];
+    constructor(myArr) {
+        this.fruits = myArr;
+    }
+    getFruits() {
+        console.log(this.fruits);
+    }
+}
+const f1 = new Fruit(["apple", "banana", "mango"]);
+f1.getFruits();
 //# sourceMappingURL=classes.js.map
